@@ -628,26 +628,553 @@ import java.util.*;
 // Enter Nth Value: 5
 // Nth Value SUM is: 15
 
-public class javaBasic{
-        public static void main(String args[]){
-                Scanner sc = new Scanner(System.in);
-                System.out.print("Enter Number you want to Reverce: ");
-                int number = sc.nextInt(); 
-                // for(int i=1; n>0; i++){
-                //         int lastDigit = n%10;
-                //         System.out.print("Reverce Digits: " + lastDigit);
-                //         n/=10;
-                // }
-                long result = 0;
-                while(number>0){
-                        int lastDigit = number%10;
-                        result = (result + lastDigit) * 10;
-                        number/=10;  
-                }
-                System.out.println("This is Reverce Number: "+result/10);
-        }
-}
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter Number you want to Reverce: ");
+//                 int number = sc.nextInt(); 
+//                 // for(int i=1; n>0; i++){
+//                 //         int lastDigit = n%10;
+//                 //         System.out.print("Reverce Digits: " + lastDigit);
+//                 //         n/=10;
+//                 // }
+//                 long result = 0;
+//                 while(number>0){
+//                         int lastDigit = number%10;
+//                         result = (result + lastDigit) * 10;
+//                         number/=10;  
+//                 }
+//                 System.out.println("This is Reverce Number: "+result/10);
+//         }
+// }
 // OUTPUT:-
 // Enter Number you want to Reverce: 1234567890
 // This is Reverce Number: 987654321
+
+// BREAK AND CONTINUE
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int number1 = 0;
+//                 int number2 = 0;
+//                 for(int i = 1; i<=5; i++){
+//                         if(i == 3){
+//                                 break;
+//                         }
+//                         number1 = (number1+i)*10;
+//                 }
+//                 System.out.print(number1/10);
+//                 System.out.println();
+//                 for(int i = 1; i<=5; i++){
+//                         if(i == 3){
+//                                 continue;
+//                         }
+//                         number2 = (number2+i)*10;
+//                 }
+//                 System.out.print(number2/10);  
+//         }
+// } 
+// OUTPUT:-
+// 1 2 
+// 1 2 4 5
+
+// KEEP ENTERING NUMBERS TILL IT MULTIPLE OF 10:-
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 int n = 0;
+                // for(int i = 1; i<=3; i++ ){
+                //         System.out.println("Enter Value: ");
+                //         n = sc.nextInt();
+                //         if (n%10 == 0) {
+                //                 break;
+                //         }
+                // }
+
+                // int i = 1;
+                // while(i<=3){
+                //         System.out.println("Enter Value: ");
+                //         n = sc.nextInt();
+                //         if (n%10 == 0) {
+                //                 break;
+                //         }
+                //         i--; //i-- = infinite loop
+                // }
+//                 int i = 1;
+//                 do{
+//                         System.out.println("Enter Value: ");
+//                         n = sc.nextInt();
+//                         if (n%10 == 0) {
+//                                 break;
+//                         }
+//                         i++;
+//                 }while(i<=3);
+//         }
+// }
+// OUTPUT:-
+// Enter Value: 
+// 5
+// Enter Value:
+// 10
+// PS C
+
+
+// SWAP NUMBERS:- CLASSICAL CODE FOR SWAPPING 
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter 1st Number: ");
+//                 int number1 = sc.nextInt();
+//                 System.out.print("Enter 2st Number: ");
+//                 int number2 = sc.nextInt();
+//                 int temp;
+//                 temp = number1;
+//                 number1 = number2;
+//                 number2 = temp;
+//                 System.out.println("After Swap 1st number is: " + number1);  
+//                 System.out.println("After Swap 2st number is: " + number2);
+//         }
+// }
+// OUTPUT:-
+// Enter 1st Number: 2
+// Enter 2st Number: 3
+// After Swap 1st number is: 3
+// After Swap 2st number is: 2
+
+// public class javaBasic{
+//         public static int factorial(int number){ 
+//                 if (number==0 || number==1) {
+//                         return number; 
+//                 }
+//                 int fact = number*factorial(number-1);
+//                 return fact;
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.println("Enter Number you want Factorial: ");
+//                 int number = sc.nextInt();
+//                 System.out.println(factorial(number));
+//         }
+// }
+
+
+// BINOMIAL COEFICIENT
+// public class javaBasic{
+//         public static int factorial(int number){ 
+//                 if (number==0 || number==1) {
+//                         return number; 
+//                 }
+//                 int fact = number*factorial(number-1);
+//                 return fact;
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter n value: ");
+//                 int n = sc.nextInt();
+//                 System.out.print("Enter r value: ");
+//                 int r = sc.nextInt();
+//                 int nFact = factorial(n);
+//                 System.out.println(n+" Factorial: "+nFact);
+//                 int rFact = factorial(r);
+//                 System.out.println(r+" Factorial: "+rFact);
+//                 int nmrFact = factorial(n-r);
+//                 System.out.println(n+"/"+r+" Factorial: "+nmrFact);
+//                 int BinomialCoefficient = nFact / (rFact*nmrFact);
+//                 System.out.println("Binomial Coefficient: "+BinomialCoefficient);
+
+//         }
+// }
+// OUTPUT:-
+// Enter n value: 5
+// Enter r value: 2
+// 5 Factorial: 120
+// 2 Factorial: 2
+// 5/2 Factorial: 6
+// Binomial Coefficient: 10
+
+// FUNCTION OVERLOADING
+// public class javaBasic{
+//         public static void sum(int number1, int number2){
+//                 int ans = number1 + number2;
+//                 System.out.println("Integer ANS: "+ans);
+//         }
+//         public static void sum(float number1, float number2){
+//                 float ans = number1 + number2;
+//                 System.out.println("Float ANS: "+ans);
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.println("Enter First Number: ");
+//                 int number1 = sc.nextInt();
+//                 System.out.println("Enter Second Number: ");
+//                 int number2 = sc.nextInt();
+//                 sum(number1, number2);
+//                 sum((float)(number1), (float)(number2));
+//                 // sum(3.5f, 4.5f);
+//         }
+// }
+// OUTPUT:-
+// Enter First Number: 
+// 3
+// Enter Second Number:
+// 4
+// Integer ANS: 7
+// Float ANS: 7.0
+
+// public class javaBasic{
+//         public static void sum(int num1, int num2){
+//                 int ans = num1 + num2;
+//                 System.out.println("2 Parameter ANS: "+ans);
+//         }
+//         public static void sum(int num1, int num2, int num3){
+//                 int ans = num1 + num2 + num3;
+//                 System.out.println("3 Parameter ANS: "+ans);
+//         }
+//         public static void main(String args[]){
+//                 int num1 = 12;
+//                 int num2 = 13;
+//                 int num3 = 14;
+//                 sum(num1, num2);
+//                 sum(num1, num2, num3);
+//         }
+// }
+// OUTPUT:-
+// 2 Parameter ANS: 25
+// 3 Parameter ANS: 39
+
+// OPTIMIZE METHORD TO CHECK PRIME NUMBERS:-
+// public class javaBasic{
+//         public static void checkIsPrime(int number){
+//                 for(int i=1; i<=Math.sqrt(number); i++){
+//                         if (number%2 != 0 || number == 2) {
+//                                 System.out.println(number+" is Prime");
+//                                 break;
+//                         }else{
+//                                 System.out.println(number+" is not Prime");
+//                                 break;
+//                         }
+//                 }
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter Number you want to Check Prime or Not Prime: ");
+//                 int number = sc.nextInt();
+//                 checkIsPrime(number);
+//         }
+// }
+// but why 9 is Prime number?
+// OUTPUT:-
+// Enter Number you want to Check Prime or Not Prime: 9
+// 9 is Prime
+
+// PRINT ALL INTEGER FROM 1 TO N'TH NUMBER:-
+// public class javaBasic{
+//         public static boolean isPrime(int nthNumber){
+//                 for(int i = 1; i<=nthNumber; i++ ){
+//                         if (nthNumber%2==0) {
+//                                 return false;
+//                         }
+//                 }
+//                 return true;
+//         }
+//         public static void printAllPrimeNumbers(int nthNumber){
+//                 for(int i=1; i<=nthNumber; i++){
+//                         if(isPrime(i)) {
+//                                 System.out.print(i+" ");
+//                         }
+//                 }
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter N'th Number: ");
+//                 int nthNumber = sc.nextInt();
+//                 printAllPrimeNumbers(nthNumber);
+//         }
+// }  
+// OUTPUT:-
+// Enter N'th Number: 20
+// 1 3 5 7 9 11 13 15 17 19
+
+// BINARY TO DECIMAL:-
+// public class javaBasic{
+//         public static void binaryToDecimal(int number){
+//                 int decimal = 0;
+//                 int pow = 0;
+//                 int binNum = number;
+//                 while(number>0){
+//                         int lastDigit = number%10;
+//                         decimal += (lastDigit * (int)Math.pow(2, pow));
+//                         pow++;
+//                         number = number / 10;
+//                 }
+//                 System.out.println("Decimal Number of "+ binNum + " is: " +decimal);
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter Binary Number: ");
+//                 int number = sc.nextInt(); 
+//                 binaryToDecimal(number);
+//         }
+// }
+// OUTPUT:-
+// Enter Binary Number: 10101
+// Decimal Number of 10101 is: 21
+
+// DECIMAL TO BINARY:-
+// public class javaBasic{
+//         public static void decimalToBinary(int number){
+//                 int binary = 0;
+//                 int pow = 0;
+//                 int rem = 0;
+//                 int decimal = number;
+//                 while(number>0){
+//                         rem = number%2;
+//                         binary += (rem * (int)Math.pow(10, pow));
+//                         pow++;
+//                         number = number / 2;
+//                 }
+//                 System.out.print("Decimal Number of "+ decimal + " is: " +binary);
+//         }
+//         public static void main(String args[]){
+//                 Scanner sc = new Scanner(System.in);
+//                 System.out.print("Enter the Decimal Number: ");
+//                 int number = sc.nextInt();
+//                 decimalToBinary(number);
+//          }
+// }
+// OUTPUT:-
+// Enter the Decimal Number: 11
+// Decimal Number of 11 is: 1011
+
+// PRINT HOLLOW RECTANGLE:-
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int num = 4;
+//                 for(int i =1; i<=num; i++ ){
+//                         for(int j=1; j<=num; j++ ){
+//                                 if (i==1||j==1||i==num||j==num) {
+//                                         System.out.print("*"+" ");
+//                                 }else{
+//                                         System.out.print(" "+" ");
+//                                 }
+//                         }
+//                         System.out.println();
+
+//                 }
+//         }
+// }
+// OUTPUT:-
+// * * * * 
+// *     *
+// *     *
+// * * * *
+
+// INVERTED AND ROTATED HALF PYRAMID
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 4;
+//                 for(int i=1; i<=n; i++ ){
+//                         for(int j=1; j<=n-i; j++ ){
+//                                 System.out.print("-"+" ");
+//                         }
+//                         for(int j=1; j<=i; j++ ){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+// OUTPUT:-
+// - - - * 
+// - - * *
+// - * * *
+// * * * *
+
+// INVERTED HALF PYRAMID WITH NUMBERS:-
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 5; 
+//                 for(int i = 1; i<=n; i++){
+//                         for(int j = 1; j<=n-i+1; j++){
+//                                 System.out.print(j+" ");
+//                         }
+//                         System.out.println();
+//                 }
+
+//         }
+// } 
+// OUTPUT:-
+// 1 2 3 4 5 
+// 1 2 3 4
+// 1 2 3
+// 1 2
+// 1
+
+// FLOYD'S TRIANGLE
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 5;
+//                 int count = 1;
+//                 for(int i = 1; i<=n; i++){
+//                         for(int j = 1; j<=i; j++){
+//                                 System.out.print(count+" ");
+//                                 count++;
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+// OUTPUT:-
+// 1 
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+
+// 1-0 HALF TRIANGLE PATTERN
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 5;
+//                 for(int i = 1; i<=n; i++ ){
+//                         for(int j=1; j<=i; j++){
+//                                 if((i+j)%2==0){
+//                                         System.out.print("1"+" ");
+//                                 }else{
+//                                         System.out.print("0"+" ");
+//                                 }
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+// OUTPUT:-
+// 1 
+// 0 1
+// 1 0 1
+// 0 1 0 1
+// 1 0 1 0 1
+
+// BUTTERFLY PATTERN
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 4;
+//                 for(int i=1; i<=n; i++){
+//                         for(int j=1; j<=i; j++){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         for(int j=1; j<=2*(n-i); j++){
+//                                 System.out.print(" "+" ");
+//                         }
+//                         for(int j=1; j<=i; j++){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         System.out.println();
+//                 }
+//                 for(int i=n; i>=1; i--){
+//                         for(int j=1; j<=i; j++){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         for(int j=1; j<=2*(n-i); j++){
+//                                 System.out.print(" "+" ");
+//                         }
+//                         for(int j=1; j<=i; j++){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+// OUTPUT:-
+// *             * 
+// * *         * *
+// * * *     * * *
+// * * * * * * * *
+// * * * * * * * *
+// * * *     * * *
+// * *         * *
+// *             *
+
+// SOLID RHOMBUS:-
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 4;
+//                 for(int i = 1; i<=n; i++){
+//                         for(int j = 1; j<=n-i+1; j++){
+//                                 System.out.print(" "+" ");
+//                         }
+//                         for(int j = 1; j<=n; j++){
+//                                 System.out.print(" *"+" ");
+//                         }
+//                         System.out.println();
+//                 }
+//         } 
+// }
+// OUTPUT:-
+//          *  *  *  * 
+//        *  *  *  *
+//      *  *  *  *
+//    *  *  *  *
+
+// HOLLOW RHOMBUS:-
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 5;
+//                 for(int i=1; i<=n; i++){
+//                         for(int j=1; j<=n-i+1; j++){
+//                                 System.out.print(" "+" ");
+//                         }
+//                         for(int j=1; j<=n; j++){
+//                                 if(i==1||j==1||i==n||j==n){
+//                                         System.out.print("*"+" ");
+//                                 }
+//                                 else{
+//                                         System.out.print(" "+" ");
+//                                 }
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+// OUTPUT:-
+//           * * * * * 
+//         *       *
+//       *       *
+//     *       *
+//   * * * * *
+
+// DIAMOND PATTERN:-
+// public class javaBasic{
+//         public static void main(String args[]){
+//                 int n = 4;
+//                 for(int i=1; i<=n; i++){
+//                         for(int j=1; j<=n-i; j++){
+//                                 System.out.print(" "+" ");
+//                         }
+//                         for(int j=1; j<=2*i-1; j++){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         System.out.println();
+//                 }
+//                 for(int i=n; i>=1; i--){
+//                         for(int j=1; j<=n-i; j++){
+//                                 System.out.print(" "+" ");
+//                         }
+//                         for(int j=1; j<=2*i-1; j++){
+//                                 System.out.print("*"+" ");
+//                         }
+//                         System.out.println();
+//                 }
+//         }
+// }
+// OUTPUT:-
+//       * 
+//     * * *
+//   * * * * *
+// * * * * * * *
+// * * * * * * *
+//   * * * * *
+//     * * *
+//       *
+
+
+
 
